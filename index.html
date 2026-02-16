@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mystery Gift Poll</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fce4ec; /* Soft Pink */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(216, 27, 96, 0.15);
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+        h2 { color: #d81b60; margin-bottom: 0.5rem; }
+        p { color: #888; margin-bottom: 2rem; font-size: 0.9rem; }
+        .options { text-align: left; margin-bottom: 2rem; }
+        .option-item {
+            margin: 12px 0;
+            padding: 12px;
+            border: 2px solid #fce4ec;
+            border-radius: 10px;
+            transition: all 0.2s ease;
+        }
+        .option-item:hover {
+            border-color: #d81b60;
+            background: #fff8fa;
+        }
+        label { cursor: pointer; display: flex; align-items: center; gap: 10px; width: 100%; font-weight: 500; color: #444; }
+        input[type="radio"] { accent-color: #d81b60; transform: scale(1.2); }
+        button {
+            background-color: #d81b60;
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(216, 27, 96, 0.3);
+            transition: transform 0.2s;
+        }
+        button:hover { background-color: #ad1457; transform: translateY(-2px); }
+        button:active { transform: translateY(0); }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>🕵️‍♀️ Mystery Revealed?</h2>
+    <p>Riffat sent a snap... but who actually got the chocolates and flowers?</p>
+    
+    <form action="https://formspree.io/f/xbdaydqr" method="POST">
+        <div class="options">
+            <div class="option-item"><label><input type="radio" name="Who_is_it" value="Pallavi" required> Pallavi</label></div>
+            <div class="option-item"><label><input type="radio" name="Who_is_it" value="Simran"> Simran</label></div>
+            <div class="option-item"><label><input type="radio" name="Who_is_it" value="Xenob"> Xenob</label></div>
+            <div class="option-item"><label><input type="radio" name="Who_is_it" value="Riffat"> Riffat</label></div>
+            <div class="option-item"><label><input type="radio" name="Who_is_it" value="Other_Hostel_Member"> Someone else in the hostel</label></div>
+            <div class="option-item"><label><input type="radio" name="Who_is_it" value="Its_A_Prank"> It's 100% a prank!</label></div>
+        </div>
+
+        <input type="hidden" name="_next" value="https://github.com"> 
+        
+        <button type="submit">Submit Your Guess</button>
+    </form>
+</div>
+
+</body>
+</html>
